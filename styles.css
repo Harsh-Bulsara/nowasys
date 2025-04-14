@@ -12,19 +12,30 @@
   
   /* Navbar */
   .navbar {
+    position: relative;
     display: flex;
+    height: 150px;
     background-color: #dff7ff;
-    justify-content: space-between;
+    /* justify-content: space-evenly; */
     align-items: center;
-    padding: 20px 60px;
+    /* padding: 0px 60px; */
     flex-wrap: wrap;
+    font-size: larger;
   }
   
+  .logo {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
   .logo img {
-    height: 40px;
+    height: 100%;
   }
   
   .nav-links {
+    margin: 0 auto;
     display: flex;
     gap: 30px;
     flex-wrap: wrap;
@@ -33,24 +44,52 @@
   .nav-links a {
     text-decoration: none;
     color: #00203f;
+    font-weight: 700;
+  }
+
+  .nav-links a:hover {
+    color: #0072b1;
+  }
+
+  .dropdown {
+    position: relative;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #ffffff;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    min-width: 200px;
+    top: 100%;
+    left: 0;
+    z-index: 1000;
+    flex-direction: column;
+    padding: 10px 0;
+  }
+  
+  .dropdown-content a {
+    padding: 10px 20px;
+    display: block;
+    color: #333;
+    white-space: nowrap;
     font-weight: 500;
   }
   
-  .contact-info {
+  .dropdown:hover .dropdown-content {
     display: flex;
-    align-items: center;
-    gap: 10px;
-    /* background-color: white; */
-    padding: 6px 12px;
-    border-radius: 8px;
-    font-size: 14px;
-    margin-top: 10px;
   }
-  
-  .contact-info img {
-    width: 16px;
-    height: 16px;
-  }
+
+  /* Hamburger Button */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 30px;
+  cursor: pointer;
+  color: #003e67;
+  z-index: 1001;
+}
   
   /* Hero Section */
   .hero {
@@ -58,7 +97,7 @@
     background-color: #dff7ff;
     justify-content: space-between;
     align-items: center;
-    padding: 80px 60px;
+    padding: 0px 60px;
     flex-wrap: wrap;
   }
   
@@ -78,10 +117,11 @@
   }
   
   .hero-text p {
-    font-size: 14px;
+    font-size: 18px;
     color: #222;
     margin-bottom: 30px;
     max-width: 500px;
+    text-align: justify;
   }
   
   .hero-text button {
@@ -127,10 +167,11 @@
   }
   
   .text-column p {
-    font-size: 15px;
+    font-size: 18px;
     line-height: 1.8;
     color: #555;
     margin-bottom: 20px;
+    text-align: justify;
   }
   
   .image-column {
@@ -149,30 +190,20 @@
   .image-wrapper img {
     width: 100%;
     height: auto;
+    margin-top: 20%;
     display: block;
     border-radius: 20px;
-  }
-  
-  .image-shadow {
-    position: absolute;
-    top: 20px;
-    right: -20px;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(to bottom, #92e3ff, #7bd5f5);
-    border-radius: 30px;
-    z-index: -1;
   }
 
   /* Services Section */
 .services-section {
     background-color: #ffffff;
-    padding: 80px 60px;
+    padding: 0px 60px;
     text-align: center;
   }
   
   .section-header p {
-    font-size: 14px;
+    font-size: 18px;
     color: #444;
   }
   
@@ -187,6 +218,8 @@
     flex-direction: row;
     gap: 20px;
     flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
   }
   
   .service-card {
@@ -201,6 +234,7 @@
     gap: 16px;
     flex: 1 1 300px; 
     max-width: 320px;
+    height: 400px;
   }
   
   .service-card img {
@@ -213,25 +247,25 @@
     font-size: 18px;
     color: #002750;
     margin-bottom: 8px;
-    text-align: left;
+    text-align: center;
   }
   
   .service-card p {
-    font-size: 14px;
+    font-size: 16px;
     color: #333;
     margin-bottom: 10px;
-    text-align: left;
+    text-align: justify;
   }
   
   .service-card a {
-    font-size: 14px;
+    font-size: 16px;
     color: #0072b1;
     text-decoration: none;
   }
   
-  .view-all-container {
+  /* .view-all-container {
     margin-top: 40px;
-  }
+  } */
   
   .view-all-container button {
     background-color: #0072b1;
@@ -331,7 +365,7 @@
     
   .industry-expertise {
     text-align: center;
-    padding: 60px 20px;
+    padding: 0px 20px;
     background-color: #fff;
   }
   
@@ -344,8 +378,8 @@
   .industry-grid {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    gap: 30px;
+    justify-content: space-evenly;
+    /* gap: 30px; */
   }
   
   .industry-item {
@@ -354,7 +388,7 @@
     padding: 24px;
     width: 130px;
     text-align: center;
-    box-shadow: 0 6px 12px rgba(0, 149, 202, 0.15);
+    /* box-shadow: 0 6px 12px rgba(0, 149, 202, 0.15); */
     transition: transform 0.3s ease;
   }
   
@@ -363,8 +397,8 @@
   }
   
   .industry-item img {
-    width: 48px;
-    height: 48px;
+    width: 100px;
+    height: 100px;
     margin-bottom: 12px;
   }
   
@@ -487,7 +521,7 @@
   
   /* Success Stories Section */
 .success-stories {
-    padding: 60px 20px;
+    padding: 0px 20px;
     background-color: #fff;
     text-align: center;
   }
@@ -574,6 +608,14 @@
   .partners-logos img:hover {
     transform: scale(1.05);
   }
+
+
+  .booking-calendar iframe {
+    width: 100%;
+    height: 700px;
+    border: 0;
+  }
+    
   
   .consultation-section {
     padding: 60px 20px;
@@ -704,83 +746,138 @@
     background-color: #004b78;
   }
 
-  .footer-section {
-    background-color: #dbf8ff;
-    padding: 60px 20px 30px;
-    font-family: Arial, sans-serif;
-    color: #003e67;
-  }
-  
-  .footer-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 40px;
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-  
-  .footer-left,
-  .footer-right {
-    flex: 1;
-    min-width: 300px;
-  }
-  
-  .footer-logo {
-    width: 120px;
-    margin-bottom: 20px;
-  }
-  
-  .footer-left h3,
-  .footer-right h3 {
-    font-size: 20px;
-    font-weight: bold;
-    color: #00042e;
-    margin-bottom: 10px;
-  }
-  
-  .footer-left p,
-  .footer-right p {
-    margin: 6px 0;
-    color: #005b8e;
-    font-size: 16px;
-  }
-  
-  .footer-contact a {
-    color: #005b8e;
-    text-decoration: none;
-  }
-  
-  .footer-contact a:hover {
-    text-decoration: underline;
-  }
-  
-  .footer-connect .social-icons {
-    display: flex;
-    gap: 12px;
-    margin-top: 10px;
-  }
-  
-  .footer-connect img {
-    width: 26px;
-    height: 26px;
-  }
-  
-  .footer-section hr {
-    border: none;
-    border-top: 1px solid #bbb;
-    margin: 30px 0 20px;
-  }
-  
-  .footer-bottom {
-    text-align: center;
-    font-size: 14px;
-    color: #555;
-  }
-  
+  /* === Footer Section === */
+
+.footer-section {
+  background-color: #def8fd; /* Light blue tone */
+  padding: 60px 40px 30px;
+  font-family: 'Arial', sans-serif;
+  color: #003e67;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-left {
+  flex: 1 1 250px;
+  min-width: 250px;
+}
+
+.footer-left img.footer-logo {
+  width: 120px;
+  margin-bottom: 20px;
+}
+
+.footer-left h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #001e36;
+}
+
+.footer-left p {
+  margin: 5px 0;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+/* Right Column - Grid Layout for Services, Industries, etc. */
+.footer-right {
+  flex: 2 1 600px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: space-between;
+}
+
+.footer-right h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #001e36;
+}
+
+.footer-right ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-right ul li {
+  margin-bottom: 8px;
+}
+
+.footer-right ul li a {
+  text-decoration: none;
+  color: #003e67;
+  font-size: 15px;
+  transition: color 0.3s;
+}
+
+.footer-right ul li a:hover {
+  color: #0072b1;
+}
+
+/* Contact & Connect */
+.footer-contact p,
+.footer-contact a {
+  font-size: 15px;
+  color: #003e67;
+  margin-bottom: 8px;
+  text-decoration: none;
+}
+
+.footer-contact a:hover {
+  color: #0072b1;
+}
+
+.footer-connect .social-icons {
+  display: flex;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.footer-connect .social-icons img {
+  width: 28px;
+  height: 28px;
+  transition: transform 0.3s;
+}
+
+.footer-connect .social-icons img:hover {
+  transform: scale(1.1);
+}
+
+/* Divider Line */
+.footer-section hr {
+  margin: 40px 0 20px;
+  border: none;
+  border-top: 1px solid #ccc;
+}
+
+/* Bottom Text */
+.footer-bottom {
+  text-align: center;
+  font-size: 14px;
+  color: #666;
+}
 
   /* Responsive Fixes */
   @media (max-width: 768px) {
+
+    .hero-text {
+      max-width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .text-column h2 {
+      text-align: center;
+    }
 
     .services-grid {
         flex-direction: row;
@@ -800,9 +897,12 @@
     }
   
     .service-card h3,
-    .service-card p,
     .service-card a {
       text-align: center;
+    }
+
+    .service-card p {
+      text-align: justify;
     }
 
     .software-container {
@@ -826,11 +926,16 @@
       .industry-item {
         width: 100px;
         padding: 20px;
+        border-radius: 12px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
       }
     
       .industry-item img {
-        width: 40px;
-        height: 40px;
+        width: 100px;
+        height: 100px;
       }
     
       .industry-item p {
@@ -852,6 +957,10 @@
         align-items: center;
         gap: 30px;
       }
+
+      .booking-calendar iframe {
+        height: 100px;
+      }
   }
   
   
@@ -861,8 +970,38 @@
       padding: 20px 30px;
     }
   
+    .menu-toggle {
+      display: block;
+      position: absolute;
+      right: 40px;
+    }
+  
     .nav-links {
+      position: absolute;
+      top: 12vh;
+      left: 0;
+      right: 0;
+      background-color: #ffffff;
+      flex-direction: column;
+      align-items: center;
       gap: 20px;
+      padding: 20px 0;
+      display: none;
+      z-index: 1000;
+    }
+  
+    .nav-links.active {
+      display: flex;
+    }
+
+    .dropdown-content {
+      position: relative;
+      box-shadow: none;
+      padding: 0;
+    }
+  
+    .dropdown-content a {
+      padding-left: 40px;
     }
   
     .hero {
@@ -873,6 +1012,9 @@
   
     .hero-text {
       max-width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
   
     .hero-image {
@@ -885,27 +1027,73 @@
     
       .info-content {
         flex-direction: column;
+        align-items: center;
+      }
+
+      .text-column {
+        text-align: justify;
+      }
+
+      .image-wrapper img {
+        margin-top: 0%;
+      }
+
+      .booking-calendar iframe {
+        height: 90vh;
+      }
+
+      .industry-grid {
+        gap: 20px;
       }
     
-      .image-shadow {
-        top: 15px;
-        right: -10px;
+      .industry-item {
+        width: 100px;
+        padding: 20px;
+        border-radius: 12px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+      }
+    
+      .industry-item img {
+        width: 100px;
+        height: 100px;
+      }
+    
+      .industry-item p {
+        font-size: 0.85rem;
       }
   }
   
   /* Responsive: Mobile */
   @media (max-width: 600px) {
     .navbar {
-      flex-direction: column;
-      align-items: flex-start;
-      padding: 20px 20px;
+      padding: 20px 30px;
+    }
+  
+    .menu-toggle {
+      display: block;
+      position: absolute;
+      right: 40px;
     }
   
     .nav-links {
+      position: absolute;
+      top: 18vh;
+      left: 0;
+      right: 0;
+      background-color: #ffffff;
       flex-direction: column;
-      width: 100%;
-      margin-top: 10px;
-      gap: 12px;
+      align-items: center;
+      gap: 20px;
+      padding: 20px 0;
+      display: none;
+      z-index: 1000;
+    }
+  
+    .nav-links.active {
+      display: flex;
     }
   
     .contact-info {
@@ -918,6 +1106,7 @@
   
     .hero-text p {
       font-size: 13px;
+      text-align: justify;
     }
   
     .hero-text button {
@@ -939,6 +1128,27 @@
     
       .image-shadow {
         display: none;
+      }
+
+      .footer-container {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    
+      .footer-right {
+        flex-direction: column;
+        gap: 30px;
+      }
+    
+      .footer-connect .social-icons {
+        justify-content: flex-start;
+      }
+
+      .booking-calendar iframe {
+        margin-top: 20%;
+        padding-left: 5%;
+        padding-right: 5%;
+        height: 90vh;
       }
   }
   

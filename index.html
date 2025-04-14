@@ -12,21 +12,72 @@
     <div class="logo">
       <img src="images/logo.webp" alt="Nowasys Logo" />
     </div>
-    <nav class="nav-links">
+    <button class="menu-toggle" id="menu-toggle">&#9776;</button>
+    <nav class="nav-links" id="nav-links">
       <a href="#">Home</a>
-      <a href="#">Services</a>
-      <a href="#">Industries</a>
-      <a href="#">Resources</a>
-      <a href="#">Careers</a>
-      <a href="#">About US</a>
-      <a href="#">Contact US</a>
+  
+      <div class="dropdown">
+        <a href="#">Services</a>
+        <div class="dropdown-content">
+          <a href="#">Data Engineering</a>
+          <a href="#">Data Analytics</a>
+          <a href="#">Data Science</a>
+          <a href="#">Prompt Engineering</a>
+          <a href="#">Business Intelligence</a>
+          <a href="#">Artificial Intelligence</a>
+          <a href="#">AI Bots</a>
+          <a href="#">Software Development</a>
+          <a href="#">Digital Marketing</a>
+          <a href="#">E-commerce</a>
+        </div>
+      </div>
+  
+      <div class="dropdown">
+        <a href="#">Industries</a>
+        <div class="dropdown-content">
+          <a href="#">Healthcare</a>
+          <a href="#">Retail E-Stores</a>
+          <a href="#">Finance</a>
+          <a href="#">Travel</a>
+          <a href="#">Logistics</a>
+          <a href="#">Saas Development</a>
+        </div>
+      </div>
+  
+      <div class="dropdown">
+        <a href="#">Resources</a>
+        <div class="dropdown-content">
+          <a href="#">Portfolio</a>
+          <a href="#">Customer Support</a>
+          <a href="#">Community and Forums</a>
+          <a href="#">Skills Development Program</a>
+          <a href="#">Traffic Awareness Program</a>
+          <a href="#">Young Millionaire Program</a>
+          <a href="#">Climate Change Events</a>
+        </div>
+      </div>
+  
+      <div class="dropdown">
+        <a href="#">Careers</a>
+        <div class="dropdown-content">
+          <a href="#">Job Search</a>
+          <a href="#">Join Us</a>
+          
+        </div>
+      </div>
+  
+      <div class="dropdown">
+        <a href="#">About Us</a>
+        <div class="dropdown-content">
+          <a href="#">Who We Are</a>
+          <a href="#">Life at Nowasys</a>
+        </div>
+      </div>
+  
+      <a href="#">Contact Us</a>
     </nav>
-    <div class="contact-info">
-      <img src="images/phone-icon.webp" alt="Phone" />
-      <span>+44 161 408 8872</span>
-    </div>
   </header>
-
+  
   <main class="hero">
     <div class="hero-text">
       <h1><span class="highlight">Nowasys</span><br>Your Trusted Data Solution Company</h1>
@@ -70,7 +121,6 @@
       <div class="image-column">
         <div class="image-wrapper">
           <img src="images/team-photo.webp" alt="Team Collaboration" />
-          <div class="image-shadow"></div>
         </div>
       </div>
     </div>
@@ -130,9 +180,6 @@
           <a href="#">Read More..</a>
         </div>
       </div>
-    </div>
-    <div class="view-all-container">
-      <button>View ALL</button>
     </div>
   </section>
     
@@ -196,7 +243,7 @@
       </div>
       <div class="industry-item">
         <img src="images/ecommerce.webp" alt="E-commerce Solution" />
-        <p>E - commerce<br />Solution</p>
+        <p>E-com</p>
       </div>
     </div>
   </section>
@@ -395,7 +442,14 @@
       <img src="images/richestsoft.webp" alt="RichestSoft Logo">
     </div>
   </section>
-  
+
+  <!-- Calender Section -->
+  <section class="booking-calendar">
+  <div>
+    <iframe src="https://calendly.com/nowasys/30min?embed_domain=www.nowasys.com&amp;embed_type=Inline" frameborder="0" scrolling="no"></iframe>
+  </div>
+</section>
+
   <!-- Consultation Form Section -->
 <section class="consultation-section">
     <h2>Need a Consultation?</h2>
@@ -404,9 +458,11 @@
         <input type="text" placeholder="Full Name" required />
         <select required>
           <option value="" disabled selected>Select Services</option>
-          <option value="big-data">Big Data</option>
-          <option value="data-analytics">Data Analytics</option>
-          <option value="web-development">Web Development</option>
+          <option value="big-data">Data Engineering Services</option>
+          <option value="data-analytics">Data Analytics Services</option>
+          <option value="web-development">Data Science Services</option>
+          <option value="web-development">Outsourcing</option>
+          <option value="web-development">Other Services</option>
         </select>
       </div>
       <input type="email" placeholder="Email" required />
@@ -415,7 +471,6 @@
     </form>
   </section>
 
-  
   <!-- Newsletter Subscription Section -->
 <section class="newsletter-section">
     <h2>SUBSCRIBE TO OUR NEWSLETTER</h2>
@@ -434,19 +489,72 @@
     <div class="footer-container">
       <div class="footer-left">
         <img src="images/logo.webp" alt="Nowasys Logo" class="footer-logo" />
-        <h3>Address:</h3><br />
+        <h3>Address</h3><br />
         <p>20 Wenlock Rd, London N1 7GU, United Kingdom</p><br />
         <p>Tajero court sacraments ca 95838, California USA</p><br />
         <p>Västra bangatan 59D. 195 40 Märsta</p>
       </div>
       <div class="footer-right">
+        <div>
+          <h3>Services</h3>
+          <ul>
+            <li><a href="#">Data Engineering</a></li>
+            <li><a href="#">Data Analytics</a></li>
+            <li><a href="#">Data Science</a></li>
+            <li><a href="#">Prompt Engineering</a></li>
+            <li><a href="#">Business Intelligence</a></li>
+            <li><a href="#">Artificial Intelligence</a></li>
+            <li><a href="#">AI Bots</a></li>
+            <li><a href="#">Software Development</a></li>
+            <li><a href="#">Digital Marketing</a></li>
+            <li><a href="#">E-commerce</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Industries</h3>
+          <ul>
+            <li><a href="#">Healthcare</a></li>
+            <li><a href="#">Retail E-Stores</a></li>
+            <li><a href="#">Finance</a></li>
+            <li><a href="#">Travel</a></li>
+            <li><a href="#">Logistics</a></li>
+            <li><a href="#">Saas Development</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Resources</h3>
+          <ul>
+            <li><a href="#">Portfolio</a></li>
+            <li><a href="#">Customer Support</a></li>
+            <li><a href="#">Community and Forums</a></li>
+            <li><a href="#">Skills Development Program</a></li>
+            <li><a href="#">Traffic Awareness Program</a></li>
+            <li><a href="#">Young Millionaire Program</a></li>
+            <li><a href="#">Climate Change Events</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Career</h3>
+          <ul>
+            <li><a href="#">Job</a></li>
+            <li><a href="#">Search</a></li>
+            <li><a href="#">Join Us</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>About Us</h3>
+          <ul>
+            <li><a href="#">Who We Are</a></li>
+            <li><a href="#">Life at Nowasys</a></li>
+          </ul>
+        </div>
         <div class="footer-contact">
-          <h3>Contact:</h3>
+          <h3>Contact</h3>
           <p>📞 +44 161 408 8872</p>
           <p>✉️ <a href="mailto:info@nowasys.com">info@nowasys.com</a></p>
         </div>
         <div class="footer-connect">
-          <h3>Connect:</h3>
+          <h3>Connect</h3>
           <div class="social-icons">
             <a href="#"><img src="images/facebook-icon.webp" alt="Facebook" /></a>
             <a href="#"><img src="images/instagram-icon.webp" alt="Instagram" /></a>
@@ -457,11 +565,21 @@
       </div>
     </div>
     <hr />
-    <p class="footer-bottom">© Copyright All rights reserved 2024.</p>
+    <p class="footer-bottom">© Copyright All rights reserved 2025.</p>
   </footer>
   
 
   
+  <script>
+    const toggleBtn = document.getElementById('menu-toggle');
+    const navLinks = document.getElementById('nav-links');
+  
+    toggleBtn.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+    });
+  </script>
+
+
   <script>
     let currentSlide = 0;
   
