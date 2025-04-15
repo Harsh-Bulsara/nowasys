@@ -137,7 +137,7 @@
   }
   
   .hero-image img {
-    width: 400px;
+    width: 300px;
     /* max-height: min-content; */
     margin-top: 30px;
   }
@@ -278,6 +278,7 @@
     border-radius: 6px;
     cursor: pointer;
     box-shadow: 2px 4px 12px rgba(0, 0, 0, 0.15);
+    
   }
   
   .software-development-section {
@@ -1115,9 +1116,9 @@
       padding: 10px 20px;
     }
   
-    .hero-image img {
-      width: 100%;
-    }
+    /* .hero-image img {
+      width: 400px;
+    } */
 
     .text-column h2 {
         font-size: 22px;
